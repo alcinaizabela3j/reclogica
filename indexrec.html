@@ -1,0 +1,37 @@
+<!--
+    Data: _23/04/_2024_
+Nome: Daniel França__________ nº: 02___ Turma: 3J____
+Nome: Gabriel Lira__________ nº: 04 ___ 
+Nome: Izabela__________ nº: 09___ 
+Nome: Julia Cascapera__________ nº: 12___ 
+Nome: Marinna__________ nº: 17___ 
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Uso das Teclas</title>
+<script src= "gamesWeb.js" ></script>
+</head>
+<body>
+<canvas id="canv" width="1000" height="600">
+Este browser não suporta o objeto canvas do HTML5.
+</canvas>
+<script>
+canvas = document.getElementById("canv");
+ctx = canvas.getContext("2d");
+nave = new Image();
+nave.src = "nave.jpg";
+nave.onload = function() {
+xNave = canvas.width / 2 - nave.width/2;
+yNave = canvas.height - nave.height;
+ctx.drawImage(nave, xNave, yNave);
+
+}
+
+document.addEventListener("keydown",
+function(evento) {
+movimentaNaveInimigo(evento.key);
+});
+</script>
+</body>
+</html>
